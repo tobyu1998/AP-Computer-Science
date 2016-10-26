@@ -1,0 +1,37 @@
+/**
+     * Help! I used too many lines of code. Help me make this more efficient.
+     * This main method must create an array with the same four words. Then I
+     * have to test each word using the password method. I have to print a
+     * message that the password was accepted.
+     * @param args 
+     */
+    public static void main(String[] args) {
+        int count = 0;
+        String[] words;
+        words = new String[4];
+        words[count] = "Imagine";
+        count++;
+        words[count] = "yourself";
+        count++;
+        words[count] = "on";
+        count++;
+        words[count] = "Mars";
+        for(int x = 0; x < words.length; x++){
+           boolean answer = password(words[x]);
+           if (answer == true){
+               System.out.println("Password accepted");
+           }
+           else{
+               //No action is required if the password fails.
+           }
+        } 
+    }
+    public static boolean password(String w){
+        boolean answer = w.equals("Mars");
+        if(answer == true){
+            return true;
+        }
+        else if(answer != true){
+            return false;
+        }else return false;
+    }
